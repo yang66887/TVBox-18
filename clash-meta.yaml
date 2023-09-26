@@ -6,6 +6,9 @@
 # 节点数量：20
 ####################################
 # !!当前配置文件请使用基于 Clash.Meta 内核程序
+
+#（一区）=============================（clash配置）
+#dns可自行修改
 mixed-port: 7890
 allow-lan: true
 log-level: info
@@ -20,28 +23,176 @@ dns:
     - 8.8.4.4
     - tls://1.0.0.1:853
     - tls://dns.google:853
-
+#（二区）==============================（代理协议）
+#当前12个协议节点配置模版，按需求修改，如某协议节点不用，则无需删除，确保三区代理分流中没有该name节点名称即可
 proxies:
-  - {name: 001-Cloudflare, server: 47.245.62.84, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 002-Cloudflare, server: 47.245.30.65, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 003-Cloudflare, server: 47.91.31.231, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 004-Cloudflare, server: 47.245.3.38, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 005-Cloudflare, server: 47.74.35.236, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 006-Cloudflare, server: 47.245.56.121, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 007-Cloudflare, server: 47.245.54.98, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 008-Cloudflare, server: 47.74.56.138, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 009-Cloudflare, server: 8.218.136.25, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 010-Cloudflare, server: 47.74.14.156, port: 80, client-fingerprint: random, type: vless, uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1, tls: false, tfo: false, servername: cf-workers-vless.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cf-workers-vless.61073736.workers.dev}}}
-  - {name: 001-JiChang, server: 47.245.59.243, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 002-JiChang, server: 47.245.10.123, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 003-JiChang, server: 47.245.12.117, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 004-JiChang, server: 47.245.39.49, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 005-JiChang, server: 47.245.52.153, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 006-JiChang, server: 47.245.2.231, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 007-JiChang, server: 47.74.43.95, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 008-JiChang, server: 47.74.56.138, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 009-JiChang, server: 47.245.59.243, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
-  - {name: 010-JiChang, server: 47.245.9.99, port: 80, client-fingerprint: random, type: vless, uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59, tls: false, tfo: false, servername: jichang.61073736.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jichang.61073736.workers.dev}}}
+#==============================（vless-ws节点）
+- name: 001-Cloudflare                               	#可自定义名称
+  type: vless
+  server: japan.com                          		#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 002-Cloudflare                               	#可自定义名称
+  type: vless
+  server: ip.sb                          		#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 003-Cloudflare                               	#可自定义名称
+  type: vless
+  server: malaysia.com                          	#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 004-Cloudflare                               	#可自定义名称
+  type: vless
+  server: time.is                          		#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 005-Cloudflare                               	#可自定义名称
+  type: vless
+  server: russia.com                          		#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 006-Cloudflare                               	#可自定义名称
+  type: vless
+  server: www.hugedomains.com                          	#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 007-Cloudflare                               	#可自定义名称
+  type: vless
+  server: download.yunzhongzhuan.com                    #解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 008-Cloudflare                               	#可自定义名称
+  type: vless
+  server: www.iplocation.net                          	#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 009-Cloudflare                               	#可自定义名称
+  type: vless
+  server: iplocation.io                          	#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 010-Cloudflare                               	#可自定义名称
+  type: vless
+  server: singapore.com                          	#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: f2b45d0c-ce7b-4d2a-b35a-d6c05af299f1       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: cf-workers-vless.61073736.workers.dev	#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: cf-workers-vless.61073736.workers.dev	#host域名，与上面的servername一致
+
+#==============================（vless-ws节点）
+- name: 001-JiChang                               	#可自定义名称
+  type: vless
+  server: www.whoer.net                          	#解析的域名或者优选域名IP
+  port: 80                                       	#自定义的端口
+  uuid: 1ead0bcd-5387-4eaa-a1c7-0f1e5d204e59       	#自定义的uuid
+  udp: true
+  tls: false
+  network: ws
+  servername: jichang.61073736.workers.dev		#sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              	#" "内自定义的path路径
+    headers:
+      Host: jichang.61073736.workers.dev		#host域名，与上面的servername一致
+
+#（三区）==============================（代理分流）
+#分流组可自行创建添加，proxies参数下的name节点名称，按需求自行增减，确保出现的name节点名称在二区代理协议中可查找
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -59,15 +210,6 @@ proxy-groups:
       - 009-Cloudflare
       - 010-Cloudflare
       - 001-JiChang
-      - 002-JiChang
-      - 003-JiChang
-      - 004-JiChang
-      - 005-JiChang
-      - 006-JiChang
-      - 007-JiChang
-      - 008-JiChang
-      - 009-JiChang
-      - 010-JiChang
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -85,15 +227,6 @@ proxy-groups:
       - 009-Cloudflare
       - 010-Cloudflare
       - 001-JiChang
-      - 002-JiChang
-      - 003-JiChang
-      - 004-JiChang
-      - 005-JiChang
-      - 006-JiChang
-      - 007-JiChang
-      - 008-JiChang
-      - 009-JiChang
-      - 010-JiChang
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -111,15 +244,6 @@ proxy-groups:
       - 009-Cloudflare
       - 010-Cloudflare
       - 001-JiChang
-      - 002-JiChang
-      - 003-JiChang
-      - 004-JiChang
-      - 005-JiChang
-      - 006-JiChang
-      - 007-JiChang
-      - 008-JiChang
-      - 009-JiChang
-      - 010-JiChang
   - name: 📲 电报信息
     type: select
     proxies:
@@ -136,15 +260,6 @@ proxy-groups:
       - 009-Cloudflare
       - 010-Cloudflare
       - 001-JiChang
-      - 002-JiChang
-      - 003-JiChang
-      - 004-JiChang
-      - 005-JiChang
-      - 006-JiChang
-      - 007-JiChang
-      - 008-JiChang
-      - 009-JiChang
-      - 010-JiChang
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -161,15 +276,6 @@ proxy-groups:
       - 009-Cloudflare
       - 010-Cloudflare
       - 001-JiChang
-      - 002-JiChang
-      - 003-JiChang
-      - 004-JiChang
-      - 005-JiChang
-      - 006-JiChang
-      - 007-JiChang
-      - 008-JiChang
-      - 009-JiChang
-      - 010-JiChang
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -186,15 +292,6 @@ proxy-groups:
       - 009-Cloudflare
       - 010-Cloudflare
       - 001-JiChang
-      - 002-JiChang
-      - 003-JiChang
-      - 004-JiChang
-      - 005-JiChang
-      - 006-JiChang
-      - 007-JiChang
-      - 008-JiChang
-      - 009-JiChang
-      - 010-JiChang
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -228,15 +325,6 @@ proxy-groups:
       - 009-Cloudflare
       - 010-Cloudflare
       - 001-JiChang
-      - 002-JiChang
-      - 003-JiChang
-      - 004-JiChang
-      - 005-JiChang
-      - 006-JiChang
-      - 007-JiChang
-      - 008-JiChang
-      - 009-JiChang
-      - 010-JiChang
 
 rules:
 # 本地/局域网地址
